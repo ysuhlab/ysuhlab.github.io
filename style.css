@@ -1306,6 +1306,10 @@ body {
 /*=========================
 	Srart service CSS
 ===========================*/
+.services {
+  background: #f9f9f9;
+  position: relative;
+}
 .services .single-service {
   margin: 30px 0;
   position: relative;
