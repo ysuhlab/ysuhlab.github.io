@@ -2507,11 +2507,7 @@ body {
   width: 12%;
 }
 .news-single .head img {
-  width: 80px;
-  height: 80px;
   line-height: 80px;
-  border-radius: 100%;
-  border: 5px solid #f8f8f8;
 }
 .news-single .single-comments .body {
   float: left;
