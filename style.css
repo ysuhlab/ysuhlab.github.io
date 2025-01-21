@@ -2017,6 +2017,8 @@ body {
   overflow: hidden;
 }
 .blog .single-news .news-content {
+  height: 310px;
+  overflow: auto;
   text-align: left;
   background: #fff;
   z-index: 99;
@@ -2045,7 +2047,7 @@ body {
   width: 100%;
 }
 .blog .single-news .news-body h2 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
   line-height: 24px;
@@ -2066,13 +2068,12 @@ body {
 }
 .blog .single-news .news-body .date {
   display: inline-block;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 5px;
   background: #1a76d1;
   color: #fff;
   padding: 4px 15px;
   border-radius: 3px;
-  font-size: 14px;
   margin-bottom: 10px;
 }
 .blog.grid .single-news {
