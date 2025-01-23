@@ -1504,22 +1504,13 @@ body {
   margin-bottom: 30px;
   background: transform;
   position: relative;
+  flex-direction: row;
+  border-radius: 0px;
 }
-.departments .department-tab .nav li {
+.departments .department-tab .nav .list-group-item {
   text-align: center;
   margin-right: 54px;
-}
-.departments .department-tab .nav li a i {
-  font-size: 50px;
-  color: #868686;
-}
-.departments .department-tab .nav li a:hover {
   background: transparent;
-}
-.departments .department-tab .nav li a.active i {
-  color: #1a76d1;
-}
-.departments .department-tab .nav li a {
   color: #fff;
   margin-top: 20px;
   border: none;
@@ -1527,23 +1518,38 @@ body {
   padding-bottom: 20px;
   border-bottom: 2px solid transparent;
   padding: 0 10px 20px 10px;
+  border-radius: 0px;
 }
-.departments .department-tab .nav li a.active {
+.departments .department-tab .nav .list-group-item:last-child {
+  margin-right: 0;
+}
+.departments .department-tab .nav .list-group-item i {
+  font-size: 50px;
+  color: #868686;
+}
+.departments .department-tab .nav .list-group-item:hover {
+  background: transparent;
+}
+.departments .department-tab .nav .list-group-item.active i {
+  color: #1a76d1;
+}
+
+.departments .department-tab .nav .list-group-item.active {
   border-color: #1a76d1;
 }
-.departments .department-tab .nav li span {
+.departments .department-tab .nav .list-group-item span {
   display: block;
 }
-.departments .department-tab .nav li .first {
+.departments .department-tab .nav .list-group-item .first {
   padding-top: 20px;
   font-size: 20px;
   font-weight: 500;
   color: #868686;
 }
-.departments .department-tab .nav li a.active .first {
+.departments .department-tab .nav .list-group-item.active .first {
   color: #2c2d3f;
 }
-.departments .department-tab .nav li .second {
+.departments .department-tab .nav .list-group-item .second {
   font-size: 14px;
   font-weight: 400;
   color: #868686;
