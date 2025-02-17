@@ -3639,7 +3639,6 @@ body {
 }
 .doctor-calendar-table table tbody tr td {
   vertical-align: middle;
-  text-align: center;
   border: 1px solid #eeeeee;
   border-top: none;
   -webkit-transition: 0.5s;
@@ -3673,16 +3672,11 @@ body {
 }
 .doctor-calendar-table table tbody tr td span.time {
   display: inline-block;
-  background-color: #dff5e8;
   color: #1a76d1;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  line-height: 65px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 .doctor-calendar-table table tbody tr td:hover {
   background-color: #1a76d1;
@@ -3695,8 +3689,7 @@ body {
   color: #ffffff;
 }
 .doctor-calendar-table table tbody tr td:hover span.time {
-  background-color: #ffffff;
-  color: #1a76d1;
+  color: #ffffff;
 }
 .doctor-calendar-table table tbody tr:last-child td {
   border-bottom: none;
