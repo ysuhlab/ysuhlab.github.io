@@ -155,23 +155,23 @@
               <!-- Tab Menu -->
               <div class="list-group nav nav-tabs" id="list-tab" role="tablist">
                 <a
-                  class="list-group-item nav-item active"
+                  class="list-group-item nav-item"
                   data-bs-toggle="list"
                   href="#tab1"
                   role="tab"
-                  aria-selected="true"
+                  aria-selected="false"
+                  tabindex="-1"
                 >
                   <i class="icofont-settings"></i
                   ><span class="first">Upcoming Projects</span
                   ><span class="second">Projects in preparation</span>
                 </a>
                 <a
-                  class="list-group-item"
+                  class="list-group-item active"
                   data-bs-toggle="list"
                   href="#tab2"
                   role="tab"
-                  aria-selected="false"
-                  tabindex="-1"
+                  aria-selected="true"
                 >
                   <i class="icofont-refresh"></i
                   ><span class="first">Current Works</span
@@ -222,7 +222,7 @@
                 <div class="tab-content" id="nav-tabContent">
                   <!-- Tab One -->
                   <div
-                    class="tab-pane fade active show"
+                    class="tab-pane fade"
                     id="tab1"
                     role="tabpanel"
                   >
@@ -252,7 +252,7 @@
                     </div>
                   </div>
                   <!-- Tab Two -->
-                  <div class="tab-pane fade" id="tab2" role="tabpanel">
+                  <div class="tab-pane fade active show" id="tab2" role="tabpanel">
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="department-left">
