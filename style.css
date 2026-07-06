@@ -4174,3 +4174,93 @@ body {
 /*=========================
 	End Footer CSS
 ===========================*/
+
+
+/*=============================
+    DATA-UX Custom: Recent News & Gallery
+===============================*/
+.recent-news {
+  background: #fff;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.recent-news .section-title {
+  margin-bottom: 35px;
+}
+.recent-news-list {
+  background: #fff;
+  border: 1px solid #e6edf5;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.recent-news-item {
+  display: flex;
+  gap: 28px;
+  padding: 22px 28px;
+  border-bottom: 1px solid #e6edf5;
+}
+.recent-news-item:last-child {
+  border-bottom: none;
+}
+.recent-news-date {
+  min-width: 110px;
+  color: #1a76d1;
+  font-weight: 700;
+}
+.recent-news-text {
+  color: #2c2d3f;
+  line-height: 1.7;
+}
+.gallery-page {
+  background: #fff;
+}
+.gallery-event {
+  margin-bottom: 45px;
+}
+.gallery-event-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c2d3f;
+  margin-bottom: 8px;
+}
+.gallery-event-meta {
+  color: #1a76d1;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.gallery-event-description {
+  margin-bottom: 25px;
+}
+.gallery-card {
+  background: #fff;
+  border: 1px solid #e6edf5;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+.gallery-card a {
+  display: block;
+  background: #f8fbff;
+}
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.gallery-caption {
+  padding: 15px 18px;
+  color: #2c2d3f;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 767px) {
+  .recent-news-item {
+    display: block;
+    padding: 20px;
+  }
+  .recent-news-date {
+    margin-bottom: 8px;
+  }
+}
