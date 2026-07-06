@@ -1581,6 +1581,8 @@ body {
 }
 .departments .department-tab .tab-pane .department-left p {
   margin-bottom: 20px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 .departments .department-tab .tab-pane .department-left .list {
 }

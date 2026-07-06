@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
-  <body>
+  <body data-page="projects">
     <!-- Preloader -->
     <div class="preloader">
       <div class="loader">
@@ -111,6 +111,7 @@
                       </li>
                       <li><a href="lectures.html">Lectures </a></li>
                       <li><a href="gallery.html">Gallery </a></li>
+                      <li><a href="notice.html">News </a></li>
                     </ul>
                   </nav>
                 </div>
@@ -229,24 +230,8 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="department-left">
-                          <h3>1</h3>
-                          <!-- <p class="p1">
-                            “Vivamus ut tellus sed tellus finibus egestas.
-                            Mauris adipiscing aliquet et nisl nec eleifend
-                            adipiscing elit.”
-                          </p> -->
-                          <p>
-                            AI-Driven Electroadhesion Laboratory, 집단연구(글로벌
-                            기초연구실), 한국연구재단(과학기술정보통신부),
-                           (공동연구자) [under review]
-                          </p>
-                          <h3>2</h3>
-                          <p>
-                            Research on User Embedding Technology for Extracting
-                            User's Potential Behavioral Characteristics,
-                            개인연구, 한국연구재단(과학기술정보통신부),
-                            (연구책임자) [under review]
-                          </p>
+                          <!-- projects 시트 category=inprepa 를 cms.js 가 렌더링 -->
+                          <div id="cms-proj-inprepa"></div>
                         </div>
                       </div>
                     </div>
@@ -256,19 +241,8 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="department-left">
-                          <h3>1</h3>
-                          <!-- <p class="p1">
-                            “Vivamus ut tellus sed tellus finibus egestas.
-                            Mauris adipiscing aliquet et nisl nec eleifend
-                            adipiscing elit.”
-                          </p> -->
-                          <p>
-                            External Knowledge–Integrated RAG-based LLM AI Application System, 국립공주대학교 SW중심대학사업 산학협력과제, 2026.02.09.-2026.11.30.
-                          </p>
-                          <h3>2</h3>
-                          <p>
-                            KNU R-Bridge Start-Up Program, Glocal University 30 Project, 2026.06–2027.02.
-                          </p>
+                          <!-- projects 시트 category=ongoing 를 cms.js 가 렌더링 -->
+                          <div id="cms-proj-ongoing"></div>
                         </div>
                       </div>
                     </div>
@@ -278,24 +252,8 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="department-left">
-                          <h3>Kongju National University</h3>
-                          <p>
-                            AI Application Service Development Utilizing LLM RAG
-                            Technology, 국립공주대학교 SW중심대학사업 산학협력과제,
-                            2025.03.01.-2024.11.30.
-                          </p>
-                          <p>
-                            Research on building a learning pipeline for emergency activity logs for applying generative AI technology, 학술연구용역, 서울연구원(AI빅데이터랩), 2025.05.12-2025.10.12 (책임연구원)
-                          </p>
-                          <p>
-                            Research on Risk-Level Predictive Modeling for Problematic Internet Use, 교내학술연구, 국립공주대학교, 2025 (연구책임자)
-                          </p>
-                          <p>
-                            A Study of Repurchase Prediction using Survival
-                            Ensembles in CRM systems for Home Appliance
-                            Business, 신임교수정착연구, 국립공주대학교, 2024
-                            (연구책임자)
-                          </p>
+                          <!-- projects 시트 category=konju 를 cms.js 가 렌더링 -->
+                          <div id="cms-proj-konju"></div>
                         </div>
                       </div>
                     </div>
@@ -747,8 +705,8 @@
             <div class="col-lg-12 col-md-12 col-12">
               <div class="copyright-content">
                 <p>
-                  © Copyright 2018 | All Rights Reserved by wpthemesgrid.com |
-                  Edited by Jinwon Yoo
+                  © 2026 YSUH Lab. All Rights Reserved. | Template by
+                  wpthemesgrid.com & Edited by Jinwon Yoo
                 </p>
               </div>
             </div>
@@ -796,5 +754,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
+    <!-- CMS (Google Sheets) JS -->
+    <script src="js/cms.js"></script>
   </body>
 </html>

@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
-  <body>
+  <body data-page="lectures">
     <!-- Preloader -->
     <div class="preloader">
       <div class="loader">
@@ -109,6 +109,7 @@
                       <li><a href="projects.html">Projects </a></li>
                       <li><a href="lectures.html">Lectures </a></li>
                       <li><a href="gallery.html">Gallery </a></li>
+                      <li><a href="notice.html">News </a></li>
                     </ul>
                   </nav>
                 </div>
@@ -140,44 +141,8 @@
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <div class="about-content">
-              <h2>Undergraduate</h2>
-        <ul>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 데이터베이스,
-            국립공주대학교, 2024~Current 봄학기
-          </li>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 고급프로그래밍설계,
-            국립공주대학교, 2024~Current 봄학기
-          </li>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 데이터베이스설계,
-            국립공주대학교, 2024~Current 가을학기
-          </li>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 창의적문제해결,
-            국립공주대학교, 2024~Current 가을학기
-          </li>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 컴퓨터자료구조,
-            국립공주대학교, 2025 봄학기
-          </li>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 종합설계 Ⅱ,
-            국립공주대학교, 2025~Current 가을학기
-          </li>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 종합설계 I,
-            국립공주대학교, 2026~Current 봄학기
-          </li>
-        </ul>
-
-        <h2>Graduate</h2>
-        <ul>
-          <li>
-            <i class="icofont-tick-mark"></i> (컴퓨터공학과) 기계학습, 국립공주대학교, 2026~Current 봄학기
-          </li>
-        </ul>
+              <!-- lectures 시트를 cms.js 가 카테고리별로 렌더링 -->
+              <div id="cms-lectures"></div>
             </div>
           </div>
         </div>
@@ -192,8 +157,8 @@
             <div class="col-lg-12 col-md-12 col-12">
               <div class="copyright-content">
                 <p>
-                  © Copyright 2018 | All Rights Reserved by wpthemesgrid.com |
-                  Edited by Jinwon Yoo
+                  © 2026 YSUH Lab. All Rights Reserved. | Template by
+                  wpthemesgrid.com & Edited by Jinwon Yoo
                 </p>
               </div>
             </div>
@@ -243,5 +208,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
+    <!-- CMS (Google Sheets) JS -->
+    <script src="js/cms.js"></script>
   </body>
 </html>

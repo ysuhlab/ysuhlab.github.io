@@ -229,22 +229,23 @@ Version:	1.1
 .testimonials .owl-dots {
 	transform: translateX(-18%);
 }
-.departments .department-tab .nav li {
-	margin-right: 30px;
+.departments .department-tab .nav {
+	flex-wrap: wrap;
+	justify-content: center;
 }
-.departments .department-tab .nav li a {
-	color: #fff;
-	margin-top:0px;
+.departments .department-tab .nav .list-group-item {
+	margin: 0 15px;
 	padding: 0 3px 12px 3px;
+	color: #fff;
 }
-.departments .department-tab .nav li a i {
+.departments .department-tab .nav .list-group-item i {
 	font-size: 38px;
 }
-.departments .department-tab .nav li .first {
+.departments .department-tab .nav .list-group-item .first {
 	padding-top: 6px;
 	font-size: 14px;
 }
-.departments .department-tab .nav li .second {
+.departments .department-tab .nav .list-group-item .second {
 	font-size: 13px;
 	font-weight: 400;
 	color: #868686;
@@ -356,6 +357,67 @@ Version:	1.1
 }
 .doctor-calendar-table table tbody tr td span.time {
 	font-size: 14px;
+}
+/* Projects tables: stack into cards instead of horizontal scroll */
+.doctor-calendar-table.table-responsive {
+	overflow-x: visible;
+}
+.doctor-calendar-table table,
+.doctor-calendar-table table tbody,
+.doctor-calendar-table table tr,
+.doctor-calendar-table table td {
+	display: block;
+	width: 100%;
+}
+.doctor-calendar-table table thead {
+	display: none;
+}
+.doctor-calendar-table table tbody tr {
+	border-bottom: 2px solid #1a76d1;
+	padding: 6px 0;
+}
+.doctor-calendar-table table tbody tr:last-child {
+	border-bottom: none;
+}
+.doctor-calendar-table table tbody tr td {
+	white-space: normal;
+	word-break: keep-all;
+	overflow-wrap: break-word;
+	border: none;
+	border-bottom: 1px solid #eee;
+	padding: 15px 18px;
+}
+.doctor-calendar-table table tbody tr td:last-child {
+	border-bottom: none;
+}
+.doctor-calendar-table table tbody tr td::before {
+	display: block;
+	margin-bottom: 8px;
+	color: #1a76d1;
+	font-weight: 600;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+#tab4 .doctor-calendar-table td:nth-child(1)::before { content: "Field"; }
+#tab4 .doctor-calendar-table td:nth-child(2)::before { content: "Research & Development Projects"; }
+#tab5 .doctor-calendar-table td:nth-child(1)::before { content: "Period"; }
+#tab5 .doctor-calendar-table td:nth-child(2)::before { content: "Project Title"; }
+#tab5 .doctor-calendar-table td:nth-child(3)::before { content: "Financial Backing"; }
+#tab5 .doctor-calendar-table td:nth-child(4)::before { content: "Contributions"; }
+/* neutralize the desktop cell hover so stacked labels/text stay legible */
+.doctor-calendar-table table tbody tr td:hover {
+	background-color: #fff;
+	border-color: #eee;
+}
+.doctor-calendar-table table tbody tr td:hover h3 {
+	color: #2c2d3f;
+}
+.doctor-calendar-table table tbody tr td:hover span {
+	color: #7d7d7d;
+}
+.doctor-calendar-table table tbody tr td:hover span.time {
+	color: #1a76d1;
 }
 .footer .single-footer {
 	margin: 20px 0;
@@ -711,22 +773,24 @@ Version:	1.1
 .testimonials .owl-dots {
 	transform: translateX(-18%);
 }
-.departments .department-tab .nav li {
-	margin: 0px 10px;
+.departments .department-tab .nav {
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 20px;
 }
-.departments .department-tab .nav li a {
+.departments .department-tab .nav .list-group-item {
+	margin: 10px 8px 0;
+	padding: 0 6px 12px 6px;
 	color: #fff;
-	margin-top:10px;
-	padding: 0 3px 12px 3px;
 }
-.departments .department-tab .nav li a i {
-	font-size: 38px;
+.departments .department-tab .nav .list-group-item i {
+	font-size: 34px;
 }
-.departments .department-tab .nav li .first {
+.departments .department-tab .nav .list-group-item .first {
 	padding-top: 6px;
 	font-size: 14px;
 }
-.departments .department-tab .nav li .second {
+.departments .department-tab .nav .list-group-item .second {
 	font-size: 13px;
 	font-weight: 400;
 	color: #868686;
@@ -817,6 +881,26 @@ Version:	1.1
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+/* Members: reset the reused avatar layout so photos stay in flow and centered */
+.news-single .single-comments .main {
+	padding-left: 0;
+	margin-left: 0;
+}
+.news-single .single-comments .head {
+	float: none;
+	width: 100%;
+	max-width: 130px;
+	margin: 0 auto 15px;
+}
+.news-single .single-comments .head img {
+	position: static;
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+}
+.news-single .single-comments .body {
+	text-align: center;
 }
 .news-single .blog-comments {
 	padding: 15px;
@@ -1184,23 +1268,25 @@ Version:	1.1
 .testimonials .owl-dots {
 	transform: translateX(-18%);
 }
-.departments .department-tab .nav li {
-	margin: 0px 10px;
+.departments .department-tab .nav {
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 20px;
 }
-.departments .department-tab .nav li a {
+.departments .department-tab .nav .list-group-item {
+	margin: 8px 6px 0;
+	padding: 0 4px 10px 4px;
 	color: #fff;
-	margin-top:10px;
-	padding: 0 3px 12px 3px;
 }
-.departments .department-tab .nav li a i {
-	font-size: 38px;
+.departments .department-tab .nav .list-group-item i {
+	font-size: 30px;
 }
-.departments .department-tab .nav li .first {
-	padding-top: 6px;
-	font-size: 14px;
-}
-.departments .department-tab .nav li .second {
+.departments .department-tab .nav .list-group-item .first {
+	padding-top: 5px;
 	font-size: 13px;
+}
+.departments .department-tab .nav .list-group-item .second {
+	font-size: 12px;
 	font-weight: 400;
 	color: #868686;
 	margin-top: 0px;

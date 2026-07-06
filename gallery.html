@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
-  <body>
+  <body data-page="gallery">
     <!-- Preloader -->
     <div class="preloader">
       <div class="loader">
@@ -109,6 +109,7 @@
                       <li><a href="projects.html">Projects </a></li>
                       <li><a href="lectures.html">Lectures </a></li>
                       <li class="active"><a href="gallery.html">Gallery </a></li>
+                      <li><a href="notice.html">News </a></li>
                     </ul>
                   </nav>
                 </div>
@@ -149,56 +150,9 @@
           </div>
         </div>
 
-        <!-- ============================================================
-             GALLERY CONCEPT TEMPLATE
-             To add a new concept/album, copy one entire
-             <div class="gallery-event"> ... </div> block below and edit:
-               - gallery-event-title / gallery-event-meta / gallery-event-description
-               - the .gallery-grid row: one .gallery-item-col per photo
-             Thumbnails are auto-cropped to a uniform size (see .gallery-item CSS),
-             so photos of any dimension line up neatly. Clicking a photo opens an
-             in-page lightbox (zoom + X close + prev/next) within its own concept.
-             ============================================================ -->
-
-        <!-- Concept: KCC 2026 -->
-        <div class="gallery-event">
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 class="gallery-event-title">Korea Computer Congress 2026 (KCC 2026)</h3>
-              <div class="gallery-event-meta">Jun. 24–26, 2026 · ICC Jeju, Korea</div>
-              <p class="gallery-event-description">
-                Sunjae Jung and Doil Choi presented undergraduate research posters at Korea Computer Congress 2026 (KCC 2026).
-              </p>
-            </div>
-          </div>
-          <div class="row gallery-grid">
-            <div class="col-lg-4 col-md-6 col-6 gallery-item-col">
-              <a href="img/gallery/kcc2026_01.jpg" class="gallery-item" title="Prof. Youngjung Suh with students at KCC 2026.">
-                <img src="img/gallery/kcc2026_01.jpg" alt="KCC 2026 photo with Prof. Youngjung Suh and students" />
-              </a>
-              <div class="gallery-thumb-caption">Prof. Youngjung Suh with students at KCC 2026.</div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-6 gallery-item-col">
-              <a href="img/gallery/kcc2026_02.jpg" class="gallery-item" title="Undergraduate research poster presentation at KCC 2026.">
-                <img src="img/gallery/kcc2026_02.jpg" alt="KCC 2026 undergraduate research poster presentation" />
-              </a>
-              <div class="gallery-thumb-caption">Undergraduate research poster presentation at KCC 2026.</div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-6 gallery-item-col">
-              <a href="img/gallery/kcc2026_03.jpg" class="gallery-item" title="Undergraduate research poster presentation at KCC 2026.">
-                <img src="img/gallery/kcc2026_03.jpg" alt="KCC 2026 undergraduate research poster presentation" />
-              </a>
-              <div class="gallery-thumb-caption">Undergraduate research poster presentation at KCC 2026.</div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-6 gallery-item-col">
-              <a href="img/gallery/kcc2026_04.jpg" class="gallery-item" title="Group photo from the KCC 2026 workshop session.">
-                <img src="img/gallery/kcc2026_04.jpg" alt="KCC 2026 group photo" />
-              </a>
-              <div class="gallery-thumb-caption">Group photo from the KCC 2026 workshop session.</div>
-            </div>
-          </div>
-        </div>
-        <!-- End Concept: KCC 2026 -->
+        <!-- Gallery: gallery 시트를 cms.js 가 event_id 로 그룹핑하여 렌더링.
+             렌더 후 magnificPopup 라이트박스가 자동 재바인딩됨. -->
+        <div id="cms-gallery"></div>
 
       </div>
     </section>
@@ -212,8 +166,8 @@
             <div class="col-lg-12 col-md-12 col-12">
               <div class="copyright-content">
                 <p>
-                  © Copyright 2018 | All Rights Reserved by wpthemesgrid.com |
-                  Edited by Jinwon Yoo
+                  © 2026 YSUH Lab. All Rights Reserved. | Template by
+                  wpthemesgrid.com & Edited by Jinwon Yoo
                 </p>
               </div>
             </div>
@@ -263,5 +217,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
+    <!-- CMS (Google Sheets) JS -->
+    <script src="js/cms.js"></script>
   </body>
 </html>
