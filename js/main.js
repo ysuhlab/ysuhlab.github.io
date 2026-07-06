@@ -266,6 +266,36 @@ Version:	1.1
       type: "video",
     });
 
+    /*=====================
+				Gallery Lightbox JS
+			=======================*/
+    // Each concept (.gallery-grid) becomes its own image gallery so that
+    // prev/next navigation stays within the same album.
+    $(".gallery-grid").each(function () {
+      $(this).magnificPopup({
+        delegate: "a.gallery-item",
+        type: "image",
+        closeOnContentClick: false,
+        closeBtnInside: true,
+        mainClass: "mfp-with-zoom mfp-img-mobile",
+        gallery: {
+          enabled: true,
+          navigateByImgClick: true,
+          preload: [0, 1],
+          tCounter: '<span class="mfp-counter">%curr% / %total%</span>',
+        },
+        zoom: {
+          enabled: true,
+          duration: 300,
+        },
+        image: {
+          titleSrc: function (item) {
+            return item.el.attr("title") || "";
+          },
+        },
+      });
+    });
+
     /*================
 			Wow JS
 		==================*/

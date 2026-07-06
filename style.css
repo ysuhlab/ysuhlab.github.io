@@ -4264,3 +4264,154 @@ body {
     margin-bottom: 8px;
   }
 }
+
+/* =====================================================
+   Custom fixes — nav / gallery / members / lectures
+   ===================================================== */
+
+/* --- 1. Navigation: fit 6 menu items without wrapping --- */
+.header .main-menu .navigation {
+  float: right;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .header .nav li {
+    margin-right: 6px;
+  }
+  .header .nav li a {
+    padding: 25px 8px;
+    font-size: 13px;
+  }
+}
+
+/* --- 2 & 3. Gallery: uniform thumbnails + lightbox --- */
+.gallery-grid {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.gallery-grid > [class*="col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.gallery-item-col {
+  margin-bottom: 24px;
+}
+.gallery-item {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f8fbff;
+  border: 1px solid #e6edf5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 4 / 3) {
+  .gallery-item {
+    height: 0;
+    padding-bottom: 75%;
+  }
+}
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 118, 209, 0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+.gallery-item::after {
+  content: "\f002"; /* FontAwesome search icon */
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+.gallery-item:hover::before,
+.gallery-item:hover::after {
+  opacity: 1;
+}
+.gallery-thumb-caption {
+  padding: 10px 4px 0;
+  color: #2c2d3f;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+.mfp-counter {
+  font-size: 13px;
+}
+
+/* --- 4. Members: uniform photos + responsive cards --- */
+.news-single .single-comments .head img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+@media only screen and (max-width: 767px) {
+  .news-single .single-comments .head {
+    float: none;
+    width: 100%;
+    max-width: 130px;
+    margin: 0 auto 15px;
+  }
+  .news-single .single-comments .body {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .news-single .single-comments h4 {
+    text-align: center;
+  }
+  .news-single .single-comments .comment-meta {
+    display: inline-block;
+  }
+  .news-single .single-comments .meta {
+    display: inline-block;
+    margin: 0 0 5px;
+  }
+}
+
+/* --- 5. Lectures: proper container + readable list --- */
+.lectures-section .about-content {
+  max-width: 100%;
+  padding: 0;
+}
+.lectures-section .about-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.lectures-section .about-content h2 + ul + h2,
+.lectures-section .about-content ul + h2 {
+  margin-top: 45px;
+}
+.lectures-section .about-content ul li {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  font-size: 15px;
+  color: #2c2d3f;
+}
