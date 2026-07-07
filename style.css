@@ -4417,3 +4417,12 @@ body {
   font-size: 15px;
   color: #2c2d3f;
 }
+
+/* --- 6. Hero slider: drop the side-by-side divider once columns stack --- */
+@media only screen and (max-width: 991px) {
+  .slider .single-slider .col-lg-6 .text {
+    border-right: none !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
