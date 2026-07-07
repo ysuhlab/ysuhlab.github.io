@@ -111,7 +111,9 @@
     if (m.email)
       lines.push('<span class="meta"><i class="fa fa-envelope"></i>' + escapeHtml(m.email) + "</span>");
 
-    var cv = m.cv_url ? escapeHtml(m.cv_url) : "#";
+    var cvLink = m.cv_url
+      ? '<a href="' + escapeHtml(m.cv_url) + '"><i class="fa fa-reply"></i>CV</a>'
+      : "";
     return (
       '<div class="single-comments">' +
       '<div class="main">' +
@@ -119,7 +121,7 @@
       '<div class="body">' +
       "<h4>" + escapeHtml(m.name) + "</h4>" +
       '<div class="comment-meta">' + lines.join("<br />") + "</div>" +
-      '<a href="' + cv + '"><i class="fa fa-reply"></i>CV</a>' +
+      cvLink +
       "</div></div></div>"
     );
   }
