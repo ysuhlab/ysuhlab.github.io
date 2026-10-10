@@ -16,7 +16,6 @@
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
   }
-
   function imgUrl(name, base) {
     if (!name) return "";
     name = String(name).trim();
@@ -27,7 +26,6 @@
   function loadingHtml() {
     return '<p class="cms-loading" style="text-align:center;color:#888;padding:40px 0;">Loading…</p>';
   }
-
   function errorHtml(msg) {
     return (
       '<p class="cms-error" style="text-align:center;color:#c0392b;padding:40px 0;">' +
@@ -49,7 +47,6 @@
       }
     }
   }
-
   function fetchSheet(name) {
     if (window.CMS_MOCK && window.CMS_MOCK[name]) {
       return Promise.resolve(window.CMS_MOCK[name]);
@@ -66,7 +63,6 @@
         return data;
       });
   }
-
   function loadAndRender(name, containerId, renderFn) {
     var c = byId(containerId);
     if (c) c.innerHTML = loadingHtml();
@@ -81,7 +77,6 @@
         if (window.console) console.error("[cms] " + name + ":", err);
       });
   }
-
   function byCategory(rows, key) {
     var out = {};
     rows.forEach(function (r) {
@@ -91,14 +86,12 @@
     });
     return out;
   }
-
   var MEMBER_GROUPS = [
     { key: "advisor", label: "Advisor", roleIcon: "fa-university", affIcon: "fa-building" },
     { key: "master", label: "Master's Students", roleIcon: "fa-graduation-cap", affIcon: "fa-university" },
     { key: "undergraduate", label: "Undergraduate Students", roleIcon: "fa-graduation-cap", affIcon: "fa-university" },
     { key: "alumni", label: "Alumni", roleIcon: "fa-graduation-cap", affIcon: "fa-university" },
   ];
-
   function memberCard(m, grp) {
     var img = imgUrl(m.image_name, CMS_CONFIG.imgBase) || CMS_CONFIG.fallbackMember;
     var lines = [];
@@ -110,7 +103,6 @@
       lines.push('<span class="meta"><i class="fa fa-phone-square"></i>' + escapeHtml(m.phone) + "</span>");
     if (m.email)
       lines.push('<span class="meta"><i class="fa fa-envelope"></i>' + escapeHtml(m.email) + "</span>");
-
     var cvLink = m.cv_url
       ? '<a href="' + escapeHtml(m.cv_url) + '"><i class="fa fa-reply"></i>CV</a>'
       : "";
@@ -125,7 +117,6 @@
       "</div></div></div>"
     );
   }
-
   function renderMembers(rows) {
     var groups = byCategory(rows, "group");
     var html = "";
@@ -146,12 +137,10 @@
     var c = byId("cms-members");
     if (c) c.innerHTML = html || errorHtml("등록된 멤버가 없습니다.");
   }
-
   var PUB_CATS = [
     { key: "journal", label: "Journal" },
     { key: "conference", label: "Conference" },
   ];
-
   function renderPubs(rows, scope) {
     // scope: "Domestic" | "International"
     var cats = byCategory(rows, "category");
@@ -183,26 +172,31 @@
       c.innerHTML = html; // 애니메이션 제거: 전체 항목을 즉시 노출
     }
   }
-
   /* ---- Projects (inprepa/ongoing/konju) ---- */
   function renderProjects(rows) {
     var cats = byCategory(rows, "category");
 
+    // Project description은 Google Sheet에서 간단한 HTML(<strong>, <em> 등)을
+    // 사용할 수 있게 하고, 셀 안의 줄바꿈은 <br>로 변환한다.
+    function projectDescriptionHtml(value) {
+      if (value === null || value === undefined) return "";
+      return String(value).replace(/\r\n|\r|\n/g, "<br>");
+    }
+
     function numbered(list) {
       return list
         .map(function (r, i) {
-          return "<h3>" + (i + 1) + "</h3><p>" + escapeHtml(r.description) + "</p>";
+          return "<h3>" + (i + 1) + "</h3><p>" + projectDescriptionHtml(r.description) + "</p>";
         })
         .join("");
     }
     function plain(list) {
       return list
         .map(function (r) {
-          return "<p>" + escapeHtml(r.description) + "</p>";
+          return "<p>" + projectDescriptionHtml(r.description) + "</p>";
         })
         .join("");
     }
-
     var map = {
       "cms-proj-inprepa": { list: cats.inprepa || [], fn: numbered },
       "cms-proj-ongoing": { list: cats.ongoing || [], fn: numbered },
@@ -215,13 +209,11 @@
       c.innerHTML = m.list.length ? m.fn(m.list) : "<p>None</p>";
     });
   }
-
   /* ---- Lectures (undergraduate/graduate) ---- */
   var LECTURE_CATS = [
     { key: "undergraduate", label: "Undergraduate" },
     { key: "graduate", label: "Graduate" },
   ];
-
   function renderLectures(rows) {
     var cats = byCategory(rows, "category");
     var html = "";
@@ -240,7 +232,6 @@
     var c = byId("cms-lectures");
     if (c) c.innerHTML = html || errorHtml("등록된 강의가 없습니다.");
   }
-
   /* ---- Gallery (event_id 그룹핑) ---- */
   function renderGallery(rows) {
     // event_id 등장 순서대로 그룹핑
@@ -255,7 +246,6 @@
       }
       if (r.image_name) groups[id].photos.push(r);
     });
-
     var html = order
       .map(function (id) {
         var g = groups[id];
@@ -285,12 +275,10 @@
         );
       })
       .join("");
-
     var c = byId("cms-gallery");
     if (c) c.innerHTML = html || errorHtml("등록된 갤러리가 없습니다.");
     bindGalleryLightbox();
   }
-
   // main.js 와 동일한 magnificPopup 옵션으로 동적 삽입분 라이트박스 재바인딩
   function bindGalleryLightbox() {
     if (!window.jQuery || !window.jQuery.fn.magnificPopup) return;
@@ -316,7 +304,6 @@
       });
     });
   }
-
   /* ---- Notice (전체) & Recent News (index top3) ---- */
   function noticeItem(r) {
     var body = "";
@@ -332,7 +319,6 @@
       "</div>"
     );
   }
-
   function renderNotice(rows) {
     var html = rows.map(noticeItem).join("");
     var c = byId("cms-notice");
@@ -344,7 +330,6 @@
     var c = byId("cms-recent-news");
     if (c) c.innerHTML = html || '<div class="recent-news-item"><div class="recent-news-text">No recent news.</div></div>';
   }
-
   /* -------------------------------------------------------------------------
    * 5. 페이지 디스패치
    * ---------------------------------------------------------------------- */
@@ -383,7 +368,6 @@
         break;
     }
   }
-
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
