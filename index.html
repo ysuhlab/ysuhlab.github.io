@@ -1,669 +1,417 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="Site keywords here" />
-    <meta name="description" content="" />
-    <meta name="copyright" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<head>
+<!-- Meta Tags -->
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="DATA-UX Lab, Applied AI, Data-centric AI, Intelligent Systems, Machine Learning, Generative AI" name="keywords"/>
+<meta content="DATA-UX Lab at Kongju National University researches data-centric applied AI for reliable, human-centered intelligent systems." name="description"/>
+<meta content="" name="copyright"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<title>DATA-UX Lab</title>
+<link href="img/favicon.png" rel="icon"/>
+<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/nice-select.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/icofont.css" rel="stylesheet"/>
+<link href="css/slicknav.min.css" rel="stylesheet"/>
+<link href="css/owl-carousel.css" rel="stylesheet"/>
+<link href="css/datepicker.css" rel="stylesheet"/>
+<link href="css/animate.min.css" rel="stylesheet"/>
+<link href="css/magnific-popup.css" rel="stylesheet"/>
+<link href="css/normalize.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/>
+<!-- Homepage-only layout fixes: keeps global style.css unchanged -->
+<style id="dataux-home-layout-v3">
+:root { --blue:#1a76d1; --ink:#2c2d3f; --muted:#657184; --border:#e2e9f3; }
+/* Hero: content-sized height instead of the original fixed 600px + excessive padding. */
+.dataux-home .slider .single-slider {
+  height:auto!important; min-height:0!important;
+  background-image:linear-gradient(90deg,rgba(12,36,73,.56),rgba(11,35,71,.44)),url('img/slider.jpg')!important;
+  background-color:#264c73; background-position:center center!important;
+  background-size:cover!important;background-repeat:no-repeat;
+  padding:49px 0 91px!important;
+  display:block!important;
+}
+.dataux-home .slider .single-slider .text { margin-top:0!important; }
+.dataux-home .slider .hero-copy { padding-right:32px!important; border-right:1px solid rgba(255,255,255,.26); }
+.dataux-home .slider .hero-recruitment {padding-left:30px!important;}
+.dataux-home .slider .hero-title {font-size:38px!important;line-height:1.2!important;margin:0 0 6px!important;color:#fff!important;font-weight:700;}
+.dataux-home .slider .hero-title span { color:#4b95df!important; }
+.dataux-home .slider .hero-tagline {color:#fff!important;font-size:19px!important;font-weight:600!important;line-height:1.4!important;margin:0 0 15px!important;}
+.dataux-home .slider .hero-recruitment-title {color:#fff!important;font-size:30px!important;font-weight:700!important;line-height:1.3!important;margin:0 0 14px!important;}
+.dataux-home .slider .hero-copy p,.dataux-home .slider .hero-recruitment p {color:#fff!important;font-size:15px!important;line-height:1.6!important;font-weight:500!important;margin:0 0 12px!important;overflow-wrap:anywhere;}
+.dataux-home .slider .hero-recruitment strong {font-weight:700;color:#fff;}
+.dataux-home .slider .hero-recruitment .contact-link {font-size:14px!important;margin-top:12px!important;}
+.dataux-home .slider .contact-link a {color:#9fdaff!important;font-weight:600;}
+/* Cards cross the hero boundary by only 46px, with no masked hero text. */
+.dataux-home .schedule {height:auto!important;margin:0 0 -46px!important;padding:0!important;background:#fff;}
+.dataux-home .schedule .schedule-inner {position:relative!important;transform:translateY(-46px)!important;z-index:4;}
+.dataux-home .schedule .schedule-inner .row {align-items:stretch;}
+.dataux-home .schedule .schedule-inner .row>div {display:flex;}
+.dataux-home .schedule .single-schedule {position:relative;flex:1;height:auto!important;min-height:298px!important; background:var(--blue);border-radius:5px;color:#fff;}
+.dataux-home .schedule .single-schedule .inner {padding:28px!important;width:100%;position:relative;overflow:hidden;}
+.dataux-home .schedule .single-schedule .icon {position:absolute;right:-17px;bottom:-25px;font-size:70px;opacity:.15;}
+.dataux-home .schedule .single-schedule .single-content>span {color:#fff;font-size:14px;font-weight:500;}
+.dataux-home .schedule .single-schedule hr {border:0;border-top:1px solid #ffffff80;margin:18px 0!important;}
+.dataux-home .schedule .single-schedule h4 {font-size:19px;line-height:1.4;font-weight:700;color:#fff;margin:24px 0 18px;}
+.dataux-home .schedule .single-schedule p,.dataux-home .schedule .single-schedule li {font-size:14px;line-height:1.65;color:#fff;margin:0;}
+.dataux-home .schedule .single-schedule a {color:#fff;font-weight:600;display:inline-block;margin-top:4px;}
+.dataux-home .schedule .single-schedule ul {padding:0;margin:0;list-style:none;}
+.dataux-home .schedule .single-schedule .time-sidual li {display:flex;justify-content:space-between;gap:5px;margin:4px 0;flex-wrap:wrap;}
+.dataux-home .schedule .single-schedule .time-sidual li span {display:inline;float:none;overflow-wrap:anywhere;}
+.dataux-home .section {padding-top:70px;padding-bottom:70px;}
+.dataux-home .section-title {text-align:center;margin-bottom:48px;}
+.dataux-home .section-title h2 {font-size:32px;line-height:1.25;color:#2c2d3f;font-weight:700;margin:0 0 16px;}
+.dataux-home .section-title>img {display:block;margin:0 auto 20px;max-height:24px;}
+.dataux-home .section-title p {font-size:15px;line-height:1.65;max-width:780px;margin:0 auto 12px;color:#868da0;}
+.dataux-home .recent-news.section {padding:64px 0 62px;}
+.dataux-home .recent-news .section-title {margin-bottom:26px;}
+.dataux-home .recent-news-list {border:1px solid #e6edf5;border-radius:8px;box-shadow:0 6px 18px #0000000d;overflow:hidden;}
+.dataux-home .recent-news-item {display:flex;gap:28px;padding:18px 26px;border-bottom:1px solid #e6edf5;}
+.dataux-home .recent-news-item:last-child {border-bottom:0;}
+.dataux-home .recent-news-date {min-width:105px;font-weight:700;color:var(--blue);}
+.dataux-home .recent-news-text {line-height:1.65;color:var(--ink);}
+.dataux-home .Feautes {padding-top:42px;padding-bottom:72px;}
+.dataux-home .Feautes .single-features {padding:5px 18px 0;position:relative;text-align:center;}
+.dataux-home .Feautes .single-features::before {content:"";position:absolute;width:95px;border-bottom:3px dotted var(--blue);right:-62px;top:55px;}
+.dataux-home .Feautes .single-features.last::before {display:none;}
+.dataux-home .Feautes .single-features .signle-icon {border:1px solid #e4e4e4;border-radius:50%;width:100px;height:100px;margin:0 auto 18px;display:flex;justify-content:center;align-items:center;color:var(--blue);font-size:45px;}
+.dataux-home .Feautes .single-features h3 {font-size:21px;font-weight:700;color:var(--ink);margin:0 0 16px;line-height:1.45;}
+.dataux-home .Feautes .single-features p {font-size:14px;line-height:1.7;color:#737f90;margin:0;}
+/* Balanced 3 x 3 technique matrix */
+.dataux-home .services {background:#f8faff;padding:70px 0 60px;}
+.dataux-home .research-intro {max-width:690px!important;}
+.dataux-home .research-areas {align-items:stretch;}
+.dataux-home .research-area-col {display:flex;margin-bottom:24px;}
+.dataux-home .research-area {width:100%;padding:22px 17px 12px;background:#fff;border:1px solid var(--border);border-top:4px solid var(--blue);border-radius:12px;box-shadow:0 6px 20px #1f406a0c;}
+.dataux-home .research-area h3 {font-size:19px;line-height:1.4;font-weight:700;color:#253a5e;margin:0 0 15px;min-height:54px;}
+.dataux-home .research-area .single-service {position:relative;margin:0 0 11px;padding:18px 14px 17px 52px;background:#f7faff;border:1px solid #e8eef6;border-radius:9px;min-height:0!important;}
+.dataux-home .research-area .single-service i {position:absolute;top:19px;left:13px;font-size:27px;color:var(--blue);}
+.dataux-home .research-area .single-service h4 {font-size:15.5px;line-height:1.4;font-weight:650;color:#2c2d3f;margin:0 0 8px;}
+.dataux-home .research-area .single-service p {font-size:13.5px;line-height:1.6;color:var(--muted);margin:0;overflow-wrap:anywhere;}
+/* Applications must fit text; never use the site's 310px scroll box. */
+.dataux-home .blog {background:#fff;padding:67px 0 82px;}
+.dataux-home .application-grid {align-items:stretch;}
+.dataux-home .application-col {display:flex;margin-bottom:20px;}
+.dataux-home .application-col .single-news {width:100%;height:100%;background:#fff;border-radius:10px;box-shadow:0 0 12px #00000014;}
+.dataux-home .blog .application-col .news-content {height:auto!important;min-height:280px;overflow:visible!important;padding:26px 23px!important;text-align:left;}
+.dataux-home .application-col .news-body .date {display:inline-block;font-size:14px;color:#fff;background:var(--blue);padding:3px 12px;border-radius:3px;margin-bottom:12px;}
+.dataux-home .application-col .news-body h2 {font-size:17px;line-height:1.45;color:var(--ink);font-weight:600;margin:0 0 16px;}
+.dataux-home .application-col .news-body ul {list-style:disc;margin:0;padding-left:20px;}
+.dataux-home .application-col .news-body ul li {list-style:disc;line-height:1.63;color:var(--muted);margin:0 0 10px;}
+.dataux-home .footer .copyright {background:var(--blue);padding:25px 0;text-align:center;}
+.dataux-home .footer .copyright p {color:#fff;margin:0;}
+@media(min-width:992px) and (max-width:1200px) {
+ .dataux-home .research-area .single-service {padding-left:45px;padding-right:10px;}
+ .dataux-home .research-area .single-service i {left:10px;font-size:23px;}
+ .dataux-home .research-area .single-service h4 {font-size:14.5px;}
+}
+@media(max-width:991px) {
+ .dataux-home .slider .single-slider {padding:44px 0 32px!important;}
+ .dataux-home .slider .hero-copy {padding:0!important;border-right:none!important;}
+ .dataux-home .slider .hero-recruitment {padding:24px 0 0!important;}
+ .dataux-home .schedule {margin:0!important;padding:26px 0 0!important;}
+ .dataux-home .schedule .schedule-inner {transform:none!important;}
+ .dataux-home .schedule .single-schedule {min-height:270px!important;margin-bottom:20px;}
+ .dataux-home .research-area h3 {min-height:0;}
+ .dataux-home .Feautes .single-features::before {display:none;}
+}
+@media(max-width:767px) {
+ .dataux-home .slider .single-slider {padding:35px 0 25px!important;}
+ .dataux-home .slider .hero-title {font-size:32px!important;}
+ .dataux-home .slider .hero-tagline {font-size:17px!important;}
+ .dataux-home .slider .hero-recruitment-title {font-size:26px!important;}
+ .dataux-home .slider .hero-copy p,.dataux-home .slider .hero-recruitment p {font-size:14px!important;}
+ .dataux-home .schedule .single-schedule {min-height:0!important;}
+ .dataux-home .section {padding-top:52px;padding-bottom:52px;}
+ .dataux-home .section-title h2 {font-size:27px;}
+ .dataux-home .recent-news-item {display:block;padding:15px 19px;}
+ .dataux-home .recent-news-date {margin-bottom:5px;}
+ .dataux-home .Feautes .single-features {margin-bottom:28px;}
+ .dataux-home .research-area {padding:19px 15px 9px;}
+ .dataux-home .blog .application-col .news-content {min-height:0;}
+}
 
-    <!-- Title -->
-    <title>DATA-UX Lab</title>
+/* In-page SVG icons for Research Direction and Research Content. */
+.dataux-home .section-title .section-rule {display:block;width:66px;height:4px;background:var(--blue);border-radius:4px;margin:3px auto 20px;opacity:.72;}
+.dataux-home svg.direction-icon {width:49px;height:49px;stroke:var(--blue);stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+.dataux-home .research-area .tech-icon {position:absolute;top:18px;left:13px;color:var(--blue);}
+.dataux-home .research-area .tech-icon svg {width:28px;height:28px;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;}
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" />
+/* Ensure no content is cropped by the theme's fixed-height feature cards. */
+.dataux-home .research-area .single-service {height:auto!important; overflow:visible!important;}
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="css/nice-select.css" />
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <!-- icofont CSS -->
-    <link rel="stylesheet" href="css/icofont.css" />
-    <!-- Slicknav -->
-    <link rel="stylesheet" href="css/slicknav.min.css" />
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="css/owl-carousel.css" />
-    <!-- Datepicker CSS -->
-    <link rel="stylesheet" href="css/datepicker.css" />
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-
-    <!-- Medipro CSS -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-
-  <body data-page="index">
-    <!-- Preloader -->
-    <div class="preloader">
-      <div class="loader">
-        <div class="loader-outter"></div>
-        <div class="loader-inner"></div>
-
-        <div class="indicator">
-          <svg width="16px" height="12px">
-            <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-            <polyline
-              id="front"
-              points="1 6 4 6 6 11 10 1 12 6 15 6"
-            ></polyline>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <!-- End Preloader -->
-
-    <!-- Header Area -->
-    <header class="header">
-      <!-- Header Inner -->
-      <div class="header-inner">
-        <div class="container">
-          <div class="inner">
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-12">
-                <!-- Start Logo -->
-                <div class="logo">
-                  <a href="index.html"><img src="img/logo.png" alt="#" /></a>
-                </div>
-                <!-- End Logo -->
-                <!-- Mobile Nav -->
-                <div class="mobile-nav"></div>
-                <!-- End Mobile Nav -->
-              </div>
-              <div class="col-lg-9 col-md-9 col-12">
-                <!-- Main Menu -->
-                <div class="main-menu">
-                  <nav class="navigation">
-                    <ul class="nav menu">
-                      <li class="active"><a href="index.html">Home </a></li>
-                      <li><a href="members.html">Members </a></li>
-                      <li>
-                        <a href="publications_inter.html"
-                        >Publications <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li>
-                            <a href="publications_dome.html">Domestic </a>
-                          </li>
-                          <li>
-                            <a href="publications_inter.html">International</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="projects.html">Projects </a></li>
-                      <li><a href="lectures.html">Lectures </a></li>
-                      <li><a href="gallery.html">Gallery </a></li>
-                      <li><a href="notice.html">News </a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <!--/ End Main Menu -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ End Header Inner -->
-    </header>
-    <!-- End Header Area -->
-
-    <!-- Slider Area -->
-    <section class="slider">
-      <div class="hero-slider">
-        <!-- Start Single Slider -->
-        <div class="single-slider" style="background-image: url('img/slider.jpg'); min-height: 550px; display: flex; align-items: flex-start;">
-          <div class="container">
-            <div class="row"> 
-              <div class="col-lg-6">
-                <div class="text" style="padding-right: 30px; border-right: 1px solid rgba(255,255,255,0.2);">
-                  <h1 style="font-size: 2.4rem; margin-bottom: px; line-height: 1.2;">
-                    Welcome to <br /><span>DATA-UX Lab</span>
-                  </h1>
-                  <h1 style="margin-bottom: 15px; font-weight: 500; font-size: 1.3rem;">
-                    Data-centric Applied AI for Intelligent Systems
-                  </h4>
-                  <p style="font-size: 1.14rem; line-height: 1.6; opacity: 0.9; margin-bottom: 0;">
-                    The DATA-UX Lab focuses on data-centric applied AI, 
-                    developing predictive, generative, and intelligent systems 
-                    across user behavior analytics, decision support, 
-                    and AI-driven design.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <div class="text" style="padding-left: 30px;">
-                  <h1 style="font-size: 2rem; color: #fff; margin-bottom: 15px; display: flex; align-items: center;">
-                    Recruitment
-                  </h2>
-                  <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 15px;">
-                    The <strong>DATA-UX</strong> (Data-centric Applied AI for Intelligent Systems) Lab,
-                    advised by Prof. Youngjung Suh, is recruiting postdoctoral researchers,
-                    graduate students, and undergraduate students who are interested in
-                    applied AI research.
-                  </p>
-                  <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 15px;">
-                    If you are interested in working on data-driven modeling,
-                    intelligent systems, LLM-based AI pipelines, or AI-driven design,
-                    please send your CV to Prof. Suh
-                    <p style="font-size: 0.95rem; margin-bottom: 0;">
-                      <i class="fa fa-envelope"></i>
-                      <a href="mailto:youngjung.suh@kongju.ac.kr" style="color: #6fc4fc; font-weight: 600;">
-                        youngjung.suh@kongju.ac.kr
-                      </a>
-                    </p>
-                  </p>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div>
-        <!-- End Single Slider -->
-        <!-- Start Single Slider -->
-        <div class="single-slider" style="background-image: url('img/slider.jpg'); min-height: 550px; display: flex; align-items: flex-start;">
-          <div class="container">
-            <div class="row"> 
-              <div class="col-lg-6">
-                <div class="text" style="padding-right: 30px; border-right: 1px solid rgba(255,255,255,0.2);">
-                  <h1 style="font-size: 2.4rem; margin-bottom: px; line-height: 1.2;">
-                    Welcome to <br /><span>DATA-UX Lab</span>
-                  </h1>
-                  <h1 style="margin-bottom: 15px; font-weight: 500; font-size: 1.3rem;">
-                    Data-centric Applied AI for Intelligent Systems
-                  </h4>
-                  <p style="font-size: 1.14rem; line-height: 1.6; opacity: 0.9; margin-bottom: 0;">
-                    The DATA-UX Lab focuses on data-centric applied AI, 
-                    developing predictive, generative, and intelligent systems 
-                    across user behavior analytics, decision support, 
-                    and AI-driven design.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <div class="text" style="padding-left: 30px;">
-                  <h1 style="font-size: 2rem; color: #fff; margin-bottom: 15px; display: flex; align-items: center;">
-                    Recruitment
-                  </h2>
-                  <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 15px;">
-                    The <strong>DATA-UX</strong> (Data-centric Applied AI for Intelligent Systems) Lab,
-                    advised by Prof. Youngjung Suh, is recruiting postdoctoral researchers,
-                    graduate students, and undergraduate students who are interested in
-                    applied AI research.
-                  </p>
-                  <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 15px;">
-                    If you are interested in working on data-driven modeling,
-                    intelligent systems, LLM-based AI pipelines, or AI-driven design,
-                    please send your CV to Prof. Suh
-                    <p style="font-size: 0.95rem; margin-bottom: 0;">
-                      <i class="fa fa-envelope"></i>
-                      <a href="mailto:youngjung.suh@kongju.ac.kr" style="color: #6fc4fc; font-weight: 600;">
-                        youngjung.suh@kongju.ac.kr
-                      </a>
-                    </p>
-                  </p>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div>
-        <!-- End Single Slider -->
-      </div>
-    </section>
-    <!--/ End Slider Area -->
-
-    <!-- Start Schedule Area -->
-    <section class="schedule">
-      <div class="container">
-        <div class="schedule-inner">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-              <!-- single-schedule -->
-              <div class="single-schedule first">
-                <div class="inner">
-                  <div class="icon">
-                    <i class="fa fa-university"></i>
-                  </div>
-                  <div class="single-content">
-                    <span>Advisor</span>
-                    <hr />
-                    <h4>
-                      Prof. <br />
-                      Youngjung Suh(서영정) <br />PH.D
-                    </h4>
-                    <hr style="margin-top: 35px" />
-                    <a href="members_ysuh.html"
-                      >More Information<i class="fa fa-long-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <!-- single-schedule -->
-              <div class="single-schedule middle">
-                <div class="inner">
-                  <div class="icon">
-                    <i class="fa fa-map-marker"></i>
-                  </div>
-                  <div class="single-content">
-                    <span>Location</span>
-                    <hr />
-                    <p>
-                      Department of Computer Science and Engineering at Kongju
-                      National University<br />
-                      1224-24 Cheonan-daero Seobuk-gu, Cheonan-si
-                      Chungcheongnam-do, South Korea<br />
-                    </p>
-
-                    <hr />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-12">
-              <!-- single-schedule -->
-              <div class="single-schedule last">
-                <div class="inner">
-                  <div class="icon">
-                    <i class="fa fa-phone"></i>
-                  </div>
-                  <div class="single-content">
-                    <span>Contact</span>
-                    <hr />
-                    <ul class="time-sidual">
-                      <li class="day">
-                        Office <span>Engineering-08 805</span>
-                      </li>
-                      <li class="day">Lab <span>Engineering-08 708</span></li>
-                      <hr />
-                      <li class="day">Tel <span>+82-41-521-9221</span></li>
-                      <li class="day">
-                        M <span>youngjung.suh@kongju.ac.kr</span>
-                      </li>
-                    </ul>
-                    <hr style="margin-bottom: 38px" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/End Start schedule Area -->
-
-
-    <!-- Start Recent News Area -->
-    <section class="recent-news section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <h2>Recent News</h2>
-              <img src="img/section-img.png" alt="#" />
-              <p>Latest updates from DATA-UX Lab.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-10 col-md-12 col-12 mx-auto">
-            <!-- Recent News: notice 시트 상위 3건을 cms.js 가 렌더링 -->
-            <div id="cms-recent-news" class="recent-news-list"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ End Recent News Area -->
-
-    <!-- Start Feautes -->
-    <section class="Feautes section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <h2>Research Direction</h2>
-              <img src="img/section-img.png" alt="#" />
-              <p>
-                Our research spans real-world domains including digital health,
-                business intelligence, intelligent services,
-                and AI-based design systems.
-              </p>
-              <br>
-              <p>
-                We aim to bridge data, models, and systems
-                to create AI technologies that are both
-                practically effective and scientifically grounded.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-12">
-            <!-- Start Single features -->
-            <div class="single-features">
-              <div class="signle-icon">
-                <i class="icofont icofont-search-user"></i>
-              </div>
-              <h3>Identification</h3>
-              <p>
-                Identify socially, economically, and culturally significant
-                issues requiring big data analysis and AI.
-              </p>
-            </div>
-            <!-- End Single features -->
-          </div>
-          <div class="col-lg-4 col-12">
-            <!-- Start Single features -->
-            <div class="single-features">
-              <div class="signle-icon">
-                <i class="icofont icofont-chart-bar-graph"></i>
-              </div>
-              <h3>Analysis</h3>
-              <p>
-                Process and analyze data to derive actionable insights and
-                optimal solutions.
-              </p>
-            </div>
-            <!-- End Single features -->
-          </div>
-          <div class="col-lg-4 col-12">
-            <!-- Start Single features -->
-            <div class="single-features last">
-              <div class="signle-icon">
-                <i class="icofont icofont-brainstorming"></i>
-              </div>
-              <h3>Prediction</h3>
-              <p>
-                Predict and respond to future phenomena or trends based on
-                pattern analysis.
-              </p>
-            </div>
-            <!-- End Single features -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ End Feautes -->
-
-    <!-- Start service -->
-    <section class="services section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <h2>Research Content</h2>
-              <img src="img/section-img.png" alt="#" />
-              <p>
-                Enhancing the usability of AI services by addressing technical
-                challenges in data science
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Start Single Service -->
-            <div class="single-service">
-              <i class="icofont icofont-tags"></i>
-              <h4><a>Labeling Technologies </a></h4>
-              <p>
-                Develop cost-efficient, fast, and accurate labeling methods
-                tailored to analytical objectives.
-              </p>
-            </div>
-            <!-- End Single Service -->
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Start Single Service -->
-            <div class="single-service">
-              <i class="icofont icofont-verification-check"></i>
-              <h4><a>Data Quality Quantification</a></h4>
-              <p>
-                Improve AI service quality by advancing data preprocessing
-                techniques (e.g., data imputation).
-              </p>
-            </div>
-            <!-- End Single Service -->
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Start Single Service -->
-            <div class="single-service">
-              <i class="icofont icofont-chart-bar-graph"></i>
-              <h4><a>Data Imbalance Solutions</a></h4>
-              <p>
-                Address imbalance through over/under-sampling and ML threshold
-                calibration.
-              </p>
-            </div>
-            <!-- End Single Service -->
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Start Single Service -->
-            <div class="single-service">
-              <i class="icofont icofont-filter"></i>
-              <h4><a>Feature Extraction</a></h4>
-              <p>
-                Develop methods for extracting features from heterogeneous and
-                complex datasets, including LLM-based user characteristic
-                modeling.
-              </p>
-            </div>
-            <!-- End Single Service -->
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Start Single Service -->
-            <div class="single-service">
-              <i class="icofont icofont-chart-line"></i>
-              <h4><a>Domain-Specific Performance Metrics</a></h4>
-              <p>
-                Create inference performance metrics for ML models tailored to
-                specific application domains.
-              </p>
-            </div>
-            <!-- End Single Service -->
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Start Single Service -->
-            <div class="single-service">
-              <i class="icofont icofont-brainstorming"></i>
-              <h4><a>Explainable AI</a></h4>
-              <p>
-                Enhance the interpretability of ML models using global
-                model-agnostic and local explanation techniques.
-              </p>
-            </div>
-            <!-- End Single Service -->
-          </div>
-          <!-- for Center -->
-          <div class="col-lg-4 col-md-6 col-12 mx-auto">
-            <!-- Start Single Service -->
-            <div class="single-service">
-              <i class="icofont icofont-brain-alt"></i>
-              <h4><a>LLM RAG</a></h4>
-              <p>
-                Overcome limitations of large language models and explore
-                practical applications for retrieval-augmented generation.
-              </p>
-            </div>
-            <!-- End Single Service -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ End service -->
-
-    <!-- Start Blog Area -->
-    <section class="blog section" id="blog">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <h2>Tentative Research Topics</h2>
-              <img src="img/section-img.png" alt="#" />
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Single Blog -->
-            <div class="single-news">
-              <div class="news-body">
-                <div class="news-content">
-                  <div class="date">Cultural Value</div>
-                  <h2>
-                    <a
-                      >Understanding User-Generated Content Across Social Media
-                      Platforms</a
-                    >
-                  </h2>
-                  <ul>
-                    <li>
-                      o Predicting factors for the success of cultural content.
-                    </li>
-                    <li>
-                      o Early trend detection: Identifying cultural trends via
-                      SNS and search data analysis.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- End Single Blog -->
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Single Blog -->
-            <div class="single-news">
-              <div class="news-body">
-                <div class="news-content">
-                  <div class="date">Social Value</div>
-                  <h2>
-                    <a
-                      >Addressing Social Issues Arising from Technological
-                      Advancement
-                    </a>
-                  </h2>
-                  <ul>
-                    <li>
-                      o Detecting excessive or problematic use of technology and
-                      the internet.
-                    </li>
-                    <li>
-                      o Predicting welfare demands for elderly populations.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- End Single Blog -->
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <!-- Single Blog -->
-            <div class="single-news">
-              <div class="news-body">
-                <div class="news-content">
-                  <div class="date">Economic Value</div>
-                  <h2>
-                    <a
-                      >Analyzing Industrial and Consumer Trends, and Enhancing
-                      Public Services
-                    </a>
-                  </h2>
-                  <ul>
-                    <li>
-                      o Forecasting workforce demands by industry and analyzing
-                      consumer complaint patterns.
-                    </li>
-                    <li>
-                      o Improving public service efficiency and quality using
-                      LLM RAG technologies.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- End Single Blog -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Blog Area -->
-
-    <footer id="footer" class="footer">
-      <!-- Copyright -->
-      <div class="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-12">
-              <div class="copyright-content">
-                <p>
-                  © 2026 YSUH Lab. All Rights Reserved. | Template by
-                  wpthemesgrid.com & Edited by Jinwon Yoo
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ End Copyright -->
-    </footer>
-    <!-- jquery Min JS -->
-    <script src="js/jquery.min.js"></script>
-    <!-- jquery Migrate JS -->
-    <script src="js/jquery-migrate-3.0.0.js"></script>
-    <!-- jquery Ui JS -->
-    <script src="js/jquery-ui.min.js"></script>
-    <!-- Easing JS -->
-    <script src="js/easing.js"></script>
-    <!-- Color JS -->
-    <script src="js/colors.js"></script>
-    <!-- Popper JS -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap Datepicker JS -->
-    <script src="js/bootstrap-datepicker.js"></script>
-    <!-- Jquery Nav JS -->
-    <script src="js/jquery.nav.js"></script>
-    <!-- Slicknav JS -->
-    <script src="js/slicknav.min.js"></script>
-    <!-- ScrollUp JS -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- Niceselect JS -->
-    <script src="js/niceselect.js"></script>
-    <!-- Tilt Jquery JS -->
-    <script src="js/tilt.jquery.min.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="js/owl-carousel.js"></script>
-    <!-- counterup JS -->
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- Steller JS -->
-    <script src="js/steller.js"></script>
-    <!-- Wow JS -->
-    <script src="js/wow.min.js"></script>
-    <!-- Magnific Popup JS -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up CDN JS -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Main JS -->
-    <script src="js/main.js"></script>
-    <!-- CMS (Google Sheets) JS -->
-    <script src="js/cms.js"></script>
-  </body>
+</style>
+</head>
+<body class="dataux-home" data-page="index"><svg aria-hidden="true" class="preview-symbols" height="0" style="position:absolute;width:0;height:0;overflow:hidden" width="0" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="v-person" viewbox="0 0 32 32"><circle cx="13" cy="11" r="5"></circle><path d="M4 27c0-7 4-11 9-11 3 0 5 1 7 4"></path><circle cx="23" cy="23" r="6"></circle><path d="m27 27 4 4"></path></symbol>
+<symbol id="v-chart" viewbox="0 0 32 32"><path d="M4 3v25h25"></path><rect height="8" width="4" x="8" y="17"></rect><rect height="16" width="4" x="16" y="9"></rect><rect height="21" width="4" x="24" y="4"></rect></symbol>
+<symbol id="v-decision" viewbox="0 0 32 32"><circle cx="16" cy="6" r="4"></circle><circle cx="6" cy="24" r="4"></circle><circle cx="26" cy="24" r="4"></circle><path d="M14 10 8 20m10-10 6 10M10 24h12"></path></symbol>
+<symbol id="v-tag" viewbox="0 0 32 32"><path d="M4 4h11l13 13-11 11L4 15Z"></path><circle cx="10" cy="10" r="2"></circle></symbol>
+<symbol id="v-feature" viewbox="0 0 32 32"><circle cx="6" cy="7" r="3"></circle><circle cx="25" cy="7" r="3"></circle><circle cx="16" cy="24" r="4"></circle><path d="M8 9 14 20M23 9 18 20M9 7h13"></path></symbol>
+<symbol id="v-model" viewbox="0 0 32 32"><path d="M4 26V7M4 26h25"></path><rect height="10" width="4" x="9" y="16"></rect><rect height="16" width="4" x="17" y="10"></rect><rect height="22" width="4" x="25" y="4"></rect></symbol>
+<symbol id="v-metric" viewbox="0 0 32 32"><path d="M3 27h26M4 6v21M7 20l6-7 5 4 8-10"></path><circle cx="7" cy="20" r="2"></circle><circle cx="13" cy="13" r="2"></circle><circle cx="18" cy="17" r="2"></circle><circle cx="26" cy="7" r="2"></circle></symbol>
+<symbol id="v-explain" viewbox="0 0 32 32"><path d="M10 25c-8-5-7-17 0-19 2-5 10-3 11 2 8 1 9 12 2 16v5h-13z"></path><circle cx="11" cy="14" r="2"></circle><circle cx="21" cy="13" r="2"></circle><circle cx="17" cy="21" r="2"></circle><path d="m13 14 6-1m-7 3 4 4m4-6-2 5"></path></symbol>
+<symbol id="v-calibration" viewbox="0 0 32 32"><path d="M4 26a12 12 0 0 1 24 0H4Z"></path><path d="m16 25 6-11M9 20l-2-2m9-5v-4m7 11 2-2"></path><circle cx="16" cy="25" r="2"></circle></symbol>
+<symbol id="v-llm" viewbox="0 0 32 32"><path d="M5 5h22v17H15l-7 6v-6H5z"></path><path d="M10 11h12M10 16h8"></path></symbol>
+<symbol id="v-multimodal" viewbox="0 0 32 32"><rect height="14" rx="2" width="14" x="5" y="6"></rect><rect height="13" rx="2" width="14" x="14" y="14"></rect><path d="m7 18 5-6 3 3M22 7h6v6"></path></symbol>
+<symbol id="v-context" viewbox="0 0 32 32"><circle cx="16" cy="16" r="12"></circle><path d="M20 12 24 8l-4 12-12 4 4-12z"></path><circle cx="16" cy="16" r="2"></circle></symbol>
+</defs></svg>
+<!-- Preloader -->
+<div class="preloader"><div class="loader">
+<div class="loader-outter"></div><div class="loader-inner"></div>
+<div class="indicator"><svg height="12px" width="16px">
+<polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+<polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+</svg></div>
+</div></div>
+<!-- End Preloader -->
+<!-- Header Area -->
+<header class="header"><div class="header-inner"><div class="container"><div class="inner"><div class="row">
+<div class="col-lg-3 col-md-3 col-12">
+<div class="logo"><a href="index.html"><img alt="DATA-UX Lab" src="img/logo.png"/></a></div>
+<div class="mobile-nav"></div>
+</div>
+<div class="col-lg-9 col-md-9 col-12"><div class="main-menu"><nav class="navigation"><ul class="nav menu">
+<li class="active"><a href="index.html">Home </a></li>
+<li><a href="members.html">Members </a></li>
+<li><a href="publications_inter.html">Publications <i class="icofont-rounded-down"></i></a>
+<ul class="dropdown"><li><a href="publications_dome.html">Domestic </a></li>
+<li><a href="publications_inter.html">International</a></li></ul>
+</li>
+<li><a href="projects.html">Projects </a></li>
+<li><a href="lectures.html">Lectures </a></li>
+<li><a href="gallery.html">Gallery </a></li>
+<li><a href="notice.html">News </a></li>
+</ul></nav></div></div>
+</div></div></div></div></header>
+<!-- End Header Area -->
+<!-- Slider Area: Preserve the two existing Owl Carousel slides -->
+<section class="slider"><div class="hero-static">
+<div class="single-slider" style="background-image: url('img/slider.jpg');">
+<div class="container"><div class="row hero-layout">
+<div class="col-lg-6 col-12">
+<div class="text hero-copy">
+<h1 class="hero-title">Welcome to <br/><span>DATA-UX Lab</span></h1>
+<h2 class="hero-tagline">Data-centric Applied AI for Intelligent Systems</h2>
+<p>The DATA-UX Lab integrates data analytics, machine learning, and generative AI to develop reliable, human-centered intelligent systems for prediction, decision support, and personalized services.</p>
+</div>
+</div>
+<div class="col-lg-6 col-12">
+<div class="text hero-recruitment">
+<h2 class="hero-recruitment-title">Recruitment</h2>
+<p>The DATA-UX Lab welcomes inquiries from prospective graduate students, postdoctoral researchers, and undergraduate students interested in applied AI research.</p>
+<p>Graduate and postdoctoral research opportunities depend on <strong>available funding and research fit.</strong></p>
+<p class="contact-link">Please email your CV and research interests:<br/>
+<i aria-hidden="true" class="fa fa-envelope"></i> <a href="mailto:youngjung.suh@kongju.ac.kr">youngjung.suh@kongju.ac.kr</a></p>
+</div>
+</div>
+</div></div>
+</div>
+</div></section>
+<!-- End Slider Area -->
+<!-- Start Schedule Area -->
+<section class="schedule"><div class="container"><div class="schedule-inner"><div class="row">
+<div class="col-lg-4 col-md-6 col-12"><div class="single-schedule first"><div class="inner">
+<div class="icon"><i class="fa fa-university"></i></div>
+<div class="single-content">
+<span>Advisor</span><hr/>
+<h4>Prof. <br/>Youngjung Suh(서영정) <br/>PH.D</h4>
+<hr style="margin-top: 35px"/>
+<a href="members_ysuh.html">More Information<i class="fa fa-long-arrow-right"></i></a>
+</div>
+</div></div></div>
+<div class="col-lg-4 col-md-6 col-12"><div class="single-schedule middle"><div class="inner">
+<div class="icon"><i class="fa fa-map-marker"></i></div>
+<div class="single-content">
+<span>Location</span><hr/>
+<p>Department of Computer Science and Engineering at Kongju
+            National University<br/>1224-24 Cheonan-daero Seobuk-gu, Cheonan-si
+            Chungcheongnam-do, South Korea<br/></p>
+<hr/>
+</div>
+</div></div></div>
+<div class="col-lg-4 col-md-12 col-12"><div class="single-schedule last"><div class="inner">
+<div class="icon"><i class="fa fa-phone"></i></div>
+<div class="single-content">
+<span>Contact</span><hr/>
+<ul class="time-sidual">
+<li class="day">Office <span>Engineering-08 805</span></li>
+<li class="day">Lab <span>Engineering-08 708</span></li>
+<hr/>
+<li class="day">Tel <span>+82-41-521-9221</span></li>
+<li class="day">M <span>youngjung.suh@kongju.ac.kr</span></li>
+</ul>
+<hr style="margin-bottom: 38px"/>
+</div>
+</div></div></div>
+</div></div></div></section>
+<!-- End Schedule Area -->
+<!-- Start Recent News Area -->
+<section class="recent-news section"><div class="container">
+<div class="row"><div class="col-lg-12"><div class="section-title">
+<h2>Recent News</h2><span aria-hidden="true" class="section-rule"></span>
+<p>Latest updates from DATA-UX Lab.</p>
+</div></div></div>
+<div class="row"><div class="col-lg-10 col-md-12 col-12 mx-auto">
+<!-- Recent News: notice 시트 상위 3건을 cms.js 가 렌더링 -->
+<div class="recent-news-list" id="cms-recent-news"></div>
+</div></div>
+</div></section>
+<!-- End Recent News Area -->
+<!-- Research Direction -->
+<section class="Feautes section"><div class="container">
+<div class="row"><div class="col-lg-12"><div class="section-title">
+<h2>Research Direction</h2><span aria-hidden="true" class="section-rule"></span>
+<p>Our research spans real-world domains including digital health,
+          business intelligence, context-aware intelligent services,
+          and AI-based design systems.</p>
+<br/>
+<p>We aim to bridge data, models, and systems to create AI technologies
+          that are both practically effective and scientifically grounded,
+          with a focus on reliable and human-centered decision support.</p>
+</div></div></div>
+<div class="row">
+<div class="col-lg-4 col-12"><div class="single-features">
+<div class="signle-icon"><svg aria-label="person" class="direction-icon" role="img"><use href="#v-person"></use></svg></div>
+<h3>Identification</h3>
+<p>Identify socially, economically, and culturally significant issues
+            where data analytics and AI can create meaningful impact.</p>
+</div></div>
+<div class="col-lg-4 col-12"><div class="single-features">
+<div class="signle-icon"><svg aria-label="chart" class="direction-icon" role="img"><use href="#v-chart"></use></svg></div>
+<h3>Analysis</h3>
+<p>Analyze real-world data and context to derive actionable insights
+            and develop reliable AI models.</p>
+</div></div>
+<div class="col-lg-4 col-12"><div class="single-features last">
+<div class="signle-icon"><svg aria-label="decision" class="direction-icon" role="img"><use href="#v-decision"></use></svg></div>
+<h3>Prediction &amp; Decision Support</h3>
+<p>Develop predictive and intelligent systems to support informed decisions and context-aware services.</p>
+</div></div>
+</div>
+</div></section>
+<!-- End Research Direction -->
+<!-- Research Content: Seven original technical topics retained -->
+<section class="services section"><div class="container">
+<div class="row"><div class="col-12"><div class="section-title">
+<h2>Research Content</h2><span aria-hidden="true" class="section-rule"></span>
+<p class="research-intro">Our research advances data-centric AI, reliable evaluation, and intelligent systems—spanning both current projects and future research directions.</p>
+</div></div></div>
+<div class="row research-areas">
+<div class="col-lg-4 col-md-6 col-12 research-area-col"><div class="research-area">
+<h3>Data-centric AI &amp;<br/>Predictive Analytics</h3>
+<div class="single-service"><span class="tech-icon"><svg aria-label="tag" role="img"><use href="#v-tag"></use></svg></span>
+<h4>Data Quality &amp; Labeling</h4><p>Assess data quality and develop efficient preprocessing and labeling strategies.</p></div>
+<div class="single-service"><span class="tech-icon"><svg aria-label="feature" role="img"><use href="#v-feature"></use></svg></span>
+<h4>Feature Engineering &amp; Representation Learning</h4><p>Design informative features and learn representations from diverse data.</p></div>
+<div class="single-service"><span class="tech-icon"><svg aria-label="model" role="img"><use href="#v-model"></use></svg></span>
+<h4>Predictive Modeling &amp; Anomaly Detection</h4><p>Build predictive and anomaly-detection models, including for imbalanced data.</p></div>
+</div></div>
+<div class="col-lg-4 col-md-6 col-12 research-area-col"><div class="research-area">
+<h3>Reliable &amp;<br/>Explainable AI</h3>
+<div class="single-service"><span class="tech-icon"><svg aria-label="metric" role="img"><use href="#v-metric"></use></svg></span>
+<h4>Model &amp; System Evaluation</h4><p>Diagnose model and pipeline failures and develop metrics aligned with user outcomes.</p></div>
+<div class="single-service"><span class="tech-icon"><svg aria-label="explain" role="img"><use href="#v-explain"></use></svg></span>
+<h4>Explainable AI</h4><p>Interpret AI predictions and decisions using model explanation techniques.</p></div>
+<div class="single-service"><span class="tech-icon"><svg aria-label="calibration" role="img"><use href="#v-calibration"></use></svg></span>
+<h4>Uncertainty Quantification &amp; Calibration</h4><p>Estimate uncertainty, calibrate confidence, and support selective prediction.</p></div>
+</div></div>
+<div class="col-lg-4 col-md-6 col-12 research-area-col"><div class="research-area">
+<h3>Generative AI &amp;<br/>Intelligent Systems</h3>
+<div class="single-service"><span class="tech-icon"><svg aria-label="llm" role="img"><use href="#v-llm"></use></svg></span>
+<h4>LLM &amp; Retrieval-Augmented Generation</h4><p>Develop grounded LLM applications, RAG pipelines, and domain-specific question answering.</p></div>
+<div class="single-service"><span class="tech-icon"><svg aria-label="multimodal" role="img"><use href="#v-multimodal"></use></svg></span>
+<h4>Multimodal Learning &amp; Fusion</h4><p>Learn from and integrate text, images, sensors, and heterogeneous data.</p></div>
+<div class="single-service"><span class="tech-icon"><svg aria-label="context" role="img"><use href="#v-context"></use></svg></span>
+<h4>Context Modeling &amp; Adaptive Systems</h4><p>Infer user and environmental context to develop adaptive intelligent services.</p></div>
+</div></div>
+</div>
+</div></section>
+<!-- End Research Content -->
+<!-- Application Domains: existing content retained -->
+<section class="blog section" id="blog"><div class="container">
+<div class="row"><div class="col-12"><div class="section-title">
+<h2>Research Applications &amp; Directions</h2>
+<span aria-hidden="true" class="section-rule"></span>
+<p>Applying core AI methods to diverse real-world challenges.</p>
+</div></div></div>
+<div class="row application-grid">
+<div class="col-lg-4 col-md-6 col-12 application-col"><div class="single-news"><div class="news-body"><div class="news-content">
+<div class="date">Cultural Value</div>
+<h2>Cultural Content &amp; Digital Trends</h2>
+<ul><li>Predict cultural content engagement and success.</li>
+<li>Analyze social media trends and user-generated content.</li></ul>
+</div></div></div></div>
+<div class="col-lg-4 col-md-6 col-12 application-col"><div class="single-news"><div class="news-body"><div class="news-content">
+<div class="date">Social Value</div>
+<h2>Social Well-Being &amp; Secure Mobility</h2>
+<ul><li>Detect harmful online content and problematic digital behavior.</li>
+<li>Develop AI-driven anomaly detection and cybersecurity intelligence for connected mobility.</li>
+<li>Anticipate needs in health and social care.</li></ul>
+</div></div></div></div>
+<div class="col-lg-4 col-md-6 col-12 application-col"><div class="single-news"><div class="news-body"><div class="news-content">
+<div class="date">Economic Value</div>
+<h2>Business Analytics &amp; Public Services</h2>
+<ul><li>Analyze workforce demand and consumer behavior.</li>
+<li>Support public-service decisions using LLM-RAG systems.</li></ul>
+</div></div></div></div>
+</div>
+</div></section>
+<!-- End Applications -->
+<footer class="footer" id="footer"><div class="copyright"><div class="container"><div class="row">
+<div class="col-lg-12 col-md-12 col-12"><div class="copyright-content">
+<p>© 2026 YSUH Lab. All Rights Reserved. | Template by
+          wpthemesgrid.com &amp; Edited by Jinwon Yoo</p>
+</div></div>
+</div></div></div></footer>
+<!-- jquery Min JS -->
+<script src="js/jquery.min.js"></script>
+<!-- jquery Migrate JS -->
+<script src="js/jquery-migrate-3.0.0.js"></script>
+<!-- jquery Ui JS -->
+<script src="js/jquery-ui.min.js"></script>
+<!-- Easing JS -->
+<script src="js/easing.js"></script>
+<!-- Color JS -->
+<script src="js/colors.js"></script>
+<!-- Popper JS -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="js/bootstrap-datepicker.js"></script>
+<!-- Jquery Nav JS -->
+<script src="js/jquery.nav.js"></script>
+<!-- Slicknav JS -->
+<script src="js/slicknav.min.js"></script>
+<!-- ScrollUp JS -->
+<script src="js/jquery.scrollUp.min.js"></script>
+<!-- Niceselect JS -->
+<script src="js/niceselect.js"></script>
+<!-- Tilt Jquery JS -->
+<script src="js/tilt.jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="js/owl-carousel.js"></script>
+<!-- counterup JS -->
+<script src="js/jquery.counterup.min.js"></script>
+<!-- Steller JS -->
+<script src="js/steller.js"></script>
+<!-- Wow JS -->
+<script src="js/wow.min.js"></script>
+<!-- Magnific Popup JS -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Counter Up CDN JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+<!-- CMS (Google Sheets) JS -->
+<script src="js/cms.js"></script>
+</body>
 </html>
